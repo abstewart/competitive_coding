@@ -1,0 +1,14 @@
+import sys
+
+#toks = (token for token in sys.stdin.read().split())
+inp = int(sys.stdin.read())
+
+remainder = inp % 4
+if inp is 0:
+    print (inp + 2)
+elif inp is 1:
+    print(inp + 1)
+elif inp is 2:
+    print(inp)
+elif inp is 3:
+    print(inp + 3)

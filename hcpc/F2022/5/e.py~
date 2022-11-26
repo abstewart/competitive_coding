@@ -1,0 +1,31 @@
+import sys
+
+toks = (token for token in sys.stdin.read().split())
+
+n = int(next(toks))
+k = int(next(toks))
+
+vids = []
+for a in range(n):
+    vids.append(int(next(toks)))
+
+
+if sum(vids) % k != 0:
+    print("NO")
+    exit()
+target = sum(vids) / k
+curr = 0
+count = 0
+ans = []
+for b in vids:
+    curr += b
+    count += 1
+    if curr == target:
+        ans.append(count)
+        curr = 0
+        count = 0
+    else if curr > target:
+        print("NO")
+        exit()
+print("YES")
+print(count)

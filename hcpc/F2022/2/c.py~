@@ -1,0 +1,30 @@
+import sys
+toks = (token for token in sys.stdin.read().split())
+
+n = int(next(toks))
+k = int(next(toks))
+planks = []
+for _ in range(n):
+    planks.append(int(next(toks)))
+
+
+
+#print("planks")
+#print(planks)
+s = 0
+e = k-1
+m = 0
+for i in range(s, k):
+    m += planks[i]
+mi = 1
+#print(m, mi)
+for _ in range(e, len(planks)):
+    s = _ - 3
+    tmp = 0
+    for i in range(s, _):
+        tmp += planks[i]
+    #print(tmp)
+    if tmp < m:
+        m = tmp
+        mi = s+1
+print(s)

@@ -1,0 +1,8 @@
+import sys
+nbut, nbulb = int(sys.stdin.readline())
+
+bulblist = list(range(1, nbulb+1))
+
+print(bulblist)
+
+nums = list(map(int, sys.stdin.readline().split()))

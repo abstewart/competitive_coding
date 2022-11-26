@@ -1,0 +1,15 @@
+import sys
+v, a, b, c = list(map(int, sys.readline.split()))
+
+v = v-a
+li = (a, b, c)
+curr = 0
+ans = ("F", "M", "T")
+while v > 0:
+    v = v - li[curr]
+    if v < 0:
+        print(ans[curr])
+        quit()
+    curr += 1
+    if curr > 2:
+        curr = 0

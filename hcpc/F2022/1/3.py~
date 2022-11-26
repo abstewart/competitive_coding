@@ -1,0 +1,12 @@
+import sys
+p1 = int(sys.stdin.readline())
+p2 = int(sys.stdin.readline())
+p3 = int(sys.stdin.readline())
+
+
+xlist = (p1[0], p2[0], p3[0])
+ylist = (p1[1], p2[1], p3[1])
+xans = xlist.count(p1[0]) == 1 ? p1[0] : p2[0] 
+
+print(xans)
+

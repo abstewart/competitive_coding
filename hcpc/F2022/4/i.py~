@@ -1,0 +1,27 @@
+import sys
+
+toks = (tok for tok in sys.stdin.read().split())
+
+
+def binarySearch(array, x):
+    low = 0
+    high = len(array)
+    while low < high:
+        
+
+
+N = int(next(toks))
+Q = int(next(toks))
+
+arr = []
+for i in range(N):
+    next_num = int(next(toks))
+    arr.append(next_num)
+
+for j in range(Q):
+    query = int(next(toks))
+    i = binarySearch(arr, query)
+    if arr[i] == query:
+        print(i)
+    else:
+        print(-1)

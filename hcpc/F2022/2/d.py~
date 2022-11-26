@@ -1,0 +1,30 @@
+import sys
+toks = (token for token in sys.stdin.read().split())
+n = int(next(toks))
+
+stones = []
+for _ in range(n):
+    stones.append(int(next(toks)))
+nq = int(next(toks))
+
+#normal prefix sums
+psums = [0]
+acc = 0
+for i in stones:
+    acc += i
+    psums.append(acc)
+
+#sorted prefix sums
+stones.sort()
+spsums = [0]
+acc = 0
+for i in stones:
+    acc += i
+    psums.append(acc)
+
+for _ in range(nq):
+    if int(next(toks)) == 1:
+        print(psums[int(next(toks))] - psums[int(next(toks)) - 1]
+    else:
+        print(spsums[int(next(toks))] - spsums[int(next(toks)) - 1]
+    
